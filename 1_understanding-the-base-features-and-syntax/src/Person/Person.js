@@ -1,8 +1,8 @@
 
 
-function Person() {
+function Person(props) {
   return (
-      <p> I'm a Person and I am {Math.floor(Math.random() * 30)} yeards old!</p>
+      <p> I'm a {props.name} and I am {props.age} yeards old!</p>
   );
 }
 
