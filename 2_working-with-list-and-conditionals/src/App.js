@@ -38,9 +38,14 @@ class App extends Component {
   }
 
   deletePersonHandler = (personIndex) => {
+
+    //bad way - updating state mutably
+    //const persons = this.state.persons;
+
+    //better way- updating state immutably
     // making copy of array
     // const persons = this.state.persons.slice();
-
+    
     //another way
     const persons = [...this.state.persons];
     
