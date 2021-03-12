@@ -52,6 +52,36 @@ class App extends Component {
       cursor: 'pointer',
     };
 
+    let persons = null;
+
+    if(this.state.showPersons) {
+      persons = (
+        <div>
+          <Person
+            name={this.state.persons[0].name}
+            age={this.state.persons[0].age}
+          />
+          <Person
+            name={this.state.persons[1].name}              
+            age={this.state.persons[1].age}
+            /*
+            Another way to bind value and execute function on click  
+            Its better to use this way whenever we can!
+            */
+            click={this.switchNameHandler.bind(this, 'Dumaraaa!')}
+            changed={this.nameChangedHanlder}
+           >
+            My Hobbies: Racing
+          </Person>
+          <Person
+            name={this.state.persons[2].name}
+            age={this.state.persons[2].age}
+          />
+      
+        </div>
+      );
+    }
+
     return (
       <div className="App">
         <h1> Hi, I 'm a React App </h1>
@@ -62,30 +92,7 @@ class App extends Component {
           style={style}>
             Show Persons
         </button> 
-        { this.state.showPersons === true ? 
-          <div>
-            <Person
-              name={this.state.persons[0].name}
-              age={this.state.persons[0].age}
-            />
-            <Person
-              name={this.state.persons[1].name}
-              age={this.state.persons[1].age}
-              /* 
-              Another way to bind value and execute function on click  
-              Its better to use this way whenever we can!
-              */
-              click={this.switchNameHandler.bind(this, 'Dumaraaa!')}
-              changed={this.nameChangedHanlder}
-            >
-              My Hobbies: Racing
-            </Person>
-            <Person
-              name={this.state.persons[2].name}
-              age={this.state.persons[2].age}
-            />
-          </div> : null
-        }
+        {persons}
       </div>
     );
   }
