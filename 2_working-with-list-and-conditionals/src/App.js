@@ -6,9 +6,9 @@ import Person from "./Person/Person";
 class App extends Component {
   state = {
     persons: [
-      { name: "Marko", age: 28 },
-      { name: "Stefan", age: 26 },
-      { name: "Bojan", age: 30 },
+      { id: 1, name: "Marko", age: 28 },
+      { id: 2, name: "Stefan", age: 26 },
+      { id: 3, name: "Bojan", age: 30 },
     ],
     otherState: 'some other value',
     showPersons: false,
@@ -45,7 +45,7 @@ class App extends Component {
     //better way- updating state immutably
     // making copy of array
     // const persons = this.state.persons.slice();
-    
+
     //another way
     const persons = [...this.state.persons];
     
@@ -77,6 +77,7 @@ class App extends Component {
             return <Person 
                     name={person.name} 
                     age={person.age}
+                    key={person.id}
                     click={() => this.deletePersonHandler(index)}
                     />
           })}
