@@ -8,12 +8,12 @@ This project was bootstrapped with Create React App.
 
 Its required to have NodeJS, NPM installed on your computer.
 ```sh
-// installs all necessary modules
-npm install
-```
-```sh
 // go into wished directory, for example:
 cd 1_understanding-the-base-features-and-syntax
+```
+```sh
+// installs all necessary modules
+npm install
 ```
 ```sh
 // runs the app in the development mode
