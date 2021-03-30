@@ -74,6 +74,14 @@ npm start
   * 📄 Working with the React Developer Tools
   * 📄 Using Error Boundaries
   * 📄 Wrap Up
+   
+  * 📂 Diving Deeper into Components & React Internals
+  * 📄 Module Introduction
+  * 📄 A Better Project Structure
+  * 📄 Splitting an App into Components
+  * 📄 Comparing Stateless and Stateful Components
+  * 📄 Class-based vs Functional Components
+  * 📄 To be continued
 
 ## 🚀 Tech/framework 
 
