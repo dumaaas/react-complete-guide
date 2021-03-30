@@ -67,15 +67,15 @@ npm start
   * 📄 Adding Pseudo Selectors
   * 📄 Working with Media Queries
 
-  * 📂 Debuggin React Apps
+* 📂 Debuggin React Apps
   * 📄 Module Introduction
   * 📄 Understanding Error Messages
   * 📄 Finding Logical Errors by using Dev Tools & Sourcemaps
   * 📄 Working with the React Developer Tools
   * 📄 Using Error Boundaries
   * 📄 Wrap Up
-   
-  * 📂 Diving Deeper into Components & React Internals
+     
+* 📂 Diving Deeper into Components & React Internals
   * 📄 Module Introduction
   * 📄 A Better Project Structure
   * 📄 Splitting an App into Components
