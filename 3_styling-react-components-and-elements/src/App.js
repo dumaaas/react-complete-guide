@@ -69,16 +69,8 @@ class App extends Component {
   }
 
   render() {
-    const style = {
-      backgroundColor: 'green',
-      color: 'white',
-      font: 'inherit',
-      border: '1px solid blue',
-      padding: '8px',
-      cursor: 'pointer',
-    };
-
     let persons = null;
+    let btnClass = '';
 
     if(this.state.showPersons) {
       persons = (
@@ -94,7 +86,7 @@ class App extends Component {
           })}
         </div>
       );
-      style.backgroundColor = 'red';
+      btnClass = classes.Red;
     }
 
     //Setting class names dynamically 
@@ -113,7 +105,7 @@ class App extends Component {
         {/* One way to bind value and execute function on click  */}
         <button 
           onClick={this.togglePersonsHandler}
-          style={style}>
+          className={btnClass}>
             Show Persons
         </button> 
         {persons}
