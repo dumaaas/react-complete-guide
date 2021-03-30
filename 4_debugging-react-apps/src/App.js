@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import classes from './App.css';
 import Person from './Person/Person';
+import ErrorBoundary from './ErrorBoundary/ErrorBoundary';
 
 // CLASS BASED COMPONENTS
 class App extends Component {
@@ -29,6 +30,10 @@ class App extends Component {
 
   nameChangedHanlder = (event, id) => {
     const personIndex = this.state.persons.findIndex(p => {
+      // MAKING AN ERROR ON PURPOSE, BUT IT WON'T THROW AN ERROR BECOUSE USERID IS UNDEFINED AND WE CANT COMPARE UNDEFINED WITH SOMETHING SO IT WONT FIND FITTING PERSON
+      // LOGICAL ERRORS -> FIXED USING BROWSER DEBUGGER
+      // GO INTO SOURCES -> OUR.JS CODE -> PLACE BREAKPOINT ON LINE THAT WE THINK WE HAVE PROBLEM AND THEN EXECUTE THAT ACTION ON OUR PAGE
+      // return p.userId === id;
       return p.id === id;
     });
 
@@ -39,6 +44,9 @@ class App extends Component {
     //alternative of above
     // const person = Object.assign({}, this.state.persons[personIndex])
 
+    //MAKING MISTAKE ON PURPOSE FOR BETTER UNDERSTANDING OF ERRORS WHICH DISPLAY IN BROWSER
+    //Error we get -> TypeError: Cannot read property 'value' of undefined, src/App.js:44
+    // person.name = event.input.value;
     person.name = event.target.value;
     
     const persons = [...this.state.persons];
@@ -76,13 +84,14 @@ class App extends Component {
       persons = (
         <div>
           {this.state.persons.map((person, index) => {
-            return <Person 
-                    name={person.name} 
-                    age={person.age}
-                    key={person.id}
-                    click={() => this.deletePersonHandler(index)}
-                    changed = {(event) => this.nameChangedHanlder(event, person.id)}
+            return <ErrorBoundary key={person.id}>
+                    <Person 
+                      name={person.name} 
+                      age={person.age}
+                      click={() => this.deletePersonHandler(index)}
+                      changed = {(event) => this.nameChangedHanlder(event, person.id)}
                     />
+                    </ErrorBoundary>
           })}
         </div>
       );
