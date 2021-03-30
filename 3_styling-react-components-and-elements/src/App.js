@@ -29,6 +29,10 @@ class App extends Component {
 
   nameChangedHanlder = (event, id) => {
     const personIndex = this.state.persons.findIndex(p => {
+      // MAKING AN ERROR ON PURPOSE, BUT IT WON'T THROW AN ERROR BECOUSE USERID IS UNDEFINED AND WE CANT COMPARE UNDEFINED WITH SOMETHING SO IT WONT FIND FITTING PERSON
+      // LOGICAL ERRORS -> FIXED USING BROWSER DEBUGGER
+      // GO INTO SOURCES -> OUR.JS CODE -> PLACE BREAKPOINT ON LINE THAT WE THINK WE HAVE PROBLEM AND THEN EXECUTE THAT ACTION ON OUR PAGE
+      // return p.userId === id;
       return p.id === id;
     });
 
