@@ -18,6 +18,7 @@ const cockpit = (props) => {
     return (
         <div className={classes.Cockpit}>
             <h1> Hi, I 'm a React App </h1>
+            <p> This is title from Index.js through App.js and now its here on Cockpit.js --- {props.title}</p>
             <p className={assignedClasses.join(' ')}> This is really working </p>
             <button 
             onClick={props.clicked}
