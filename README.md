@@ -67,6 +67,14 @@ npm start
   * 📄 Adding Pseudo Selectors
   * 📄 Working with Media Queries
 
+  * 📂 Debuggin React Apps
+  * 📄 Module Introduction
+  * 📄 Understanding Error Messages
+  * 📄 Finding Logical Errors by using Dev Tools & Sourcemaps
+  * 📄 Working with the React Developer Tools
+  * 📄 Using Error Boundaries
+  * 📄 Wrap Up
+
 ## 🚀 Tech/framework 
 
 * ReactJS
