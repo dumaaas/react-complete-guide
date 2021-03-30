@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import "./App.css";
-import Person from "./Person/Person";
+import classes from './App.css';
+import Person from './Person/Person';
 
 // CLASS BASED COMPONENTS
 class App extends Component {
@@ -98,18 +98,18 @@ class App extends Component {
     }
 
     //Setting class names dynamically 
-    const classes = []; // empty
+    const assignedClasses = []; // empty
     if(this.state.persons.length <=2) {
-      classes.push('red'); // classes = ['red']
+      assignedClasses.push(classes.red); // classes = ['red']
     }
     if(this.state.persons.length <= 1) {
-      classes.push('bold'); // classes = ['red', 'bold']
+      assignedClasses.push(classes.bold); // classes = ['red', 'bold']
     }
 
     return (
-      <div className="App">
+      <div className={classes.App}>
         <h1> Hi, I 'm a React App </h1>
-        <p className={classes.join(' ')}> This is really working </p>
+        <p className={assignedClasses.join(' ')}> This is really working </p>
         {/* One way to bind value and execute function on click  */}
         <button 
           onClick={this.togglePersonsHandler}
