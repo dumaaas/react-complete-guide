@@ -41,7 +41,8 @@ class App extends Component {
 
     //MAKING MISTAKE ON PURPOSE FOR BETTER UNDERSTANDING OF ERRORS WHICH DISPLAY IN BROWSER
     //Error we get -> TypeError: Cannot read property 'value' of undefined, src/App.js:44
-    person.name = event.input.value;
+    // person.name = event.input.value;
+    person.name = event.target.value;
     
     const persons = [...this.state.persons];
     persons[personIndex] = person;
