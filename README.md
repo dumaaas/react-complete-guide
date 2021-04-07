@@ -90,7 +90,7 @@ npm start
   * 📄 Cleaning up with Lifecycle Hooks & useEffect()
   * 📄 Cleanup Work with useEffect() - Ex
   * 📄 Using shouldComponentUpdate for Optimization
-  * 📄
+  * 📄 Optimizing Functional Components with React.memo()
 
 ## 🚀 Tech/framework 
 
