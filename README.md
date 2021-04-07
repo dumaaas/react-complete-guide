@@ -93,6 +93,8 @@ npm start
   * 📄 Optimizing Functional Components with React.memo()
   * 📄 PureComponents instead of shouldComponentUpdate
   * 📄 How React Updates the DOM
+  * 📄 Rendering Adjacent JSX Elements
+  * 📄 Using React Fragment
 
 
 ## 🚀 Tech/framework 
