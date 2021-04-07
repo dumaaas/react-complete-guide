@@ -1,14 +1,23 @@
 import React, { useEffect } from 'react';
 import classes from './Cockpit.css';
 
-const cockpit = (props) => {
+const Cockpit = (props) => {
     // it runs for every update
     // also it runs when component is created
     // we can use it for all the things we could have done in componentDidUpdate()
+    // IMPORTANT - if we want useEffects to execute only once, instead of second argument [props.persons] we need to pass empty array [] as a second argument
     useEffect(() => {
         console.log('[Cockpit.js] useEffect');
         // Http request ...
-    });
+        setTimeout(() => {
+            alert('Saved date to cloud!');
+        }, 1000);
+    }, [props.persons]); // execute useEffects() only if Persons component is changed 
+
+    // we can use useEffect as many times as we want
+    // useEffect(() => {
+    //    do something...
+    // }
 
     const assignedClasses = []; // empty
     let btnClass = '';
@@ -37,4 +46,4 @@ const cockpit = (props) => {
     );
 };
 
-export default cockpit;
+export default Cockpit;

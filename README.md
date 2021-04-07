@@ -86,8 +86,7 @@ npm start
   * 📄 Component Update Lifecycle (for props changes)
   * 📄 Component Update Lifecycle (for state changes)
   * 📄 Using useEffect() in Functional Components
-
-
+  * 📄 Controlling the useEffect() Behavior
 
 
 ## 🚀 Tech/framework 
