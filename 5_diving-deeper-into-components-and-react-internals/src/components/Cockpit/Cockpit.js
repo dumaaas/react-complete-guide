@@ -12,12 +12,20 @@ const Cockpit = (props) => {
         setTimeout(() => {
             alert('Saved date to cloud!');
         }, 1000);
+
+        // CLEAN UP - it runs BEFORE the main useEffect function runs, but AFTER the (first) render cycle!
+        return () => {
+            console.log('[Cockpit.js] cleanup work in useEffect')
+        };
     }, [props.persons]); // execute useEffects() only if Persons component is changed 
 
     // we can use useEffect as many times as we want
-    // useEffect(() => {
-    //    do something...
-    // }
+    useEffect(() => {
+        console.log('[Cockpit.js] 2nd useEffect');
+        return() => {
+            console.log('[Cockpit.js] cleanup work in 2nd useEffect');
+        }
+    });
 
     const assignedClasses = []; // empty
     let btnClass = '';
