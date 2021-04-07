@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import classes from './Cockpit.css';
 
 const cockpit = (props) => {
+    // it runs for every update
+    // also it runs when component is created
+    // we can use it for all the things we could have done in componentDidUpdate()
+    useEffect(() => {
+        console.log('[Cockpit.js] useEffect');
+        // Http request ...
+    });
+
     const assignedClasses = []; // empty
     let btnClass = '';
 

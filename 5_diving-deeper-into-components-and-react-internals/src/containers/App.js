@@ -45,7 +45,7 @@ class App extends Component {
   }
 
   componentDidUpdate() {
-    comsole.log('[App.js] componentDidUpdate');
+    console.log('[App.js] componentDidUpdate');
   }
 
   switchNameHandler = (newName) => {
