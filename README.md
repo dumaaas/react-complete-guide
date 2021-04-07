@@ -91,6 +91,7 @@ npm start
   * 📄 Cleanup Work with useEffect() - Ex
   * 📄 Using shouldComponentUpdate for Optimization
   * 📄 Optimizing Functional Components with React.memo()
+  * 📄 PureComponents instead of shouldComponentUpdate
 
 ## 🚀 Tech/framework 
 
