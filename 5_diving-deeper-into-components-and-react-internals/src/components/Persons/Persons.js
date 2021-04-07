@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import Person from './Person/Person';
 
-class Persons extends Component {
+// PureComponent is just a normal Component that already implements shouldComponentUpdate() with a complete props checked
+class Persons extends PureComponent {
     // COMPONENT UPDATE LIFECYCYLE (FOR PROPS CHANGES)
     // first step is getDerivedStateFromProps(props, state) 
     // second step is shouldComponentUpdate(nextProps, nextState) -> decide whether to continue or not (may cancel upating process!)
@@ -13,21 +14,25 @@ class Persons extends Component {
     //     console.log('[Person.js] getDerivedStateFromProps');
     //     return state;
     // }
-    
 
     // SHOULD NOT BE USED ANYMORE! 
     // componentWillReceiveProps(props) {
     //     console.log('[Persons.js] componentWillReceiveProps', props);
     // }
 
-    shouldComponentUpdate(nextProps, nextState) {
-        console.log('[Person.js] shouldComponentUpate');
-        if(nextProps.persons !== this.props.persons) {
-            return true;
-        } else {
-            return false;
-        }
-    }
+    // IF WE ARE CHECKING ALL PROPS THEN WE SHOULD NOT USE shouldComponentUpdate but instead exted different type of Component -> PureComponent
+    // shouldComponentUpdate(nextProps, nextState) {
+    //     console.log('[Person.js] shouldComponentUpate');
+    //     if(
+    //         nextProps.persons !== this.props.persons || 
+    //         nextProps.changed !== this.props.changed || 
+    //         nextProps.clicked !== this.props.clicked
+    //     ) {
+    //         return true;
+    //     } else {
+    //         return false;
+    //     }
+    // }
     
     getSnapshotBeforeUpdate(prevProps, prevState) {
         console.log('[Person.js] getSnapshotBeforeUpdate');
