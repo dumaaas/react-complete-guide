@@ -8,7 +8,7 @@ class App extends Component {
   //Component Creation Lifecycle in Action
   //first step is constructor() -> starting creation of component
   //second step is getDerivedStateFromProps() -> geting state from props
-  //third step is render() -> rendering component 
+  //third step is render() -> prepare & structure our JSX Code 
   //fourth step is componentWillMount -> just before component mounting
   //fifth step is componentDidMount -> component did mount xD
   constructor(props) {
@@ -31,9 +31,9 @@ class App extends Component {
     return state;
   }
 
-  componentWillMount() {
-    console.log('[App.js] componentWillMount');
-  }
+  // componentWillMount() {
+  //   console.log('[App.js] componentWillMount');
+  // }
 
   componentDidMount() {
     console.log('[App.js] componentDidMount');
@@ -52,7 +52,7 @@ class App extends Component {
     })
   }
 
-  nameChangedHanlder = (event, id) => {
+  nameChangedHandler = (event, id) => {
     const personIndex = this.state.persons.findIndex(p => {
       return p.id === id;
     });
@@ -103,7 +103,7 @@ class App extends Component {
           <Persons 
             persons={this.state.persons}
             clicked={this.deletePersonHandler}
-            nameChangedHanlder={this.nameChangedHanlder}
+            changed={this.nameChangedHandler}
           />
         </div>
       );

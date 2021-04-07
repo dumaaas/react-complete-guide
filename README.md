@@ -62,7 +62,7 @@ npm start
   * 📄 Setting Styles Dynamically
   * 📄 Setting Class Names Dynamically
   * 📄 Adding and Using Radium
-  * 📄 Using Radium for Media Queries
+  * 📄 Using Radium for Media QuCeries
   * 📄 Enabling & Using CSS Modules
   * 📄 Adding Pseudo Selectors
   * 📄 Working with Media Queries
