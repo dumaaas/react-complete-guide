@@ -92,6 +92,8 @@ npm start
   * 📄 Using shouldComponentUpdate for Optimization
   * 📄 Optimizing Functional Components with React.memo()
   * 📄 PureComponents instead of shouldComponentUpdate
+  * 📄 How React Updates the DOM
+
 
 ## 🚀 Tech/framework 
 
