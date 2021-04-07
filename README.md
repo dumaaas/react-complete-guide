@@ -89,7 +89,7 @@ npm start
   * 📄 Controlling the useEffect() Behavior
   * 📄 Cleaning up with Lifecycle Hooks & useEffect()
   * 📄 Cleanup Work with useEffect() - Ex
-  * 📄
+  * 📄 Using shouldComponentUpdate for Optimization
   * 📄
 
 ## 🚀 Tech/framework 
