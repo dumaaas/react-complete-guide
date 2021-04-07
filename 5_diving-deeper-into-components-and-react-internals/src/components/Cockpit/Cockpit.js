@@ -9,12 +9,13 @@ const Cockpit = (props) => {
     useEffect(() => {
         console.log('[Cockpit.js] useEffect');
         // Http request ...
-        setTimeout(() => {
+        const timer = setTimeout(() => {
             alert('Saved date to cloud!');
         }, 1000);
 
         // CLEAN UP - it runs BEFORE the main useEffect function runs, but AFTER the (first) render cycle!
         return () => {
+            clearTimeout(timer);
             console.log('[Cockpit.js] cleanup work in useEffect')
         };
     }, [props.persons]); // execute useEffects() only if Persons component is changed 
