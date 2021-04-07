@@ -83,6 +83,10 @@ npm start
   * 📄 Class-based vs Functional Components
   * 📄 Class Component Lifecycle Overview
   * 📄 Component Creation Lifecycle in Action
+  * 📄 Component Update Lifecycle (for props changes)
+  * 📄 Component Update Lifecycle (for state changes)
+
+
 
 
 ## 🚀 Tech/framework 
