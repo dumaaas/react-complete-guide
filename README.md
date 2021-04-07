@@ -81,7 +81,9 @@ npm start
   * 📄 Splitting an App into Components
   * 📄 Comparing Stateless and Stateful Components
   * 📄 Class-based vs Functional Components
-  * 📄 To be continued
+  * 📄 Class Component Lifecycle Overview
+  * 📄 Component Creation Lifecycle in Action
+
 
 ## 🚀 Tech/framework 
 

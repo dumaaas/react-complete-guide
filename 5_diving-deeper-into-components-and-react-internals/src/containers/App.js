@@ -4,6 +4,18 @@ import Persons from '../components/Persons/Persons';
 import Cockpit from '../components/Cockpit/Cockpit';
 // CLASS BASED COMPONENTS
 class App extends Component {
+
+  //Component Creation Lifecycle in Action
+  //first step is constructor() -> starting creation of component
+  //second step is getDerivedStateFromProps() -> geting state from props
+  //third step is render() -> rendering component 
+  //fourth step is componentWillMount -> just before component mounting
+  //fifth step is componentDidMount -> component did mount xD
+  constructor(props) {
+    super(props);
+    console.log('[App.js] constructor');
+  }
+
   state = {
     persons: [
       { id: 1, name: "Marko", age: 28 },
@@ -12,6 +24,19 @@ class App extends Component {
     ],
     otherState: 'some other value',
     showPersons: false,
+  }
+
+  static getDerivedStateFromProps(props, state) {
+    console.log('[App.js] getDerivedStateFromProps', props);
+    return state;
+  }
+
+  componentWillMount() {
+    console.log('[App.js] componentWillMount');
+  }
+
+  componentDidMount() {
+    console.log('[App.js] componentDidMount');
   }
 
   switchNameHandler = (newName) => {
@@ -69,6 +94,7 @@ class App extends Component {
   }
 
   render() {
+    console.log('[App.js] render');
     let persons = null;
 
     if(this.state.showPersons) {
